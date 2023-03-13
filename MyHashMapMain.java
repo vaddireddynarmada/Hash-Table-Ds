@@ -1,20 +1,20 @@
 public class MyHashMapMain {
     public static void main(String[] args) {
-        String sentence = "To be or not to be";
-        MyHashMap<String, Integer> myHashMap = new MyHashMap<>();
+        String sentence = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations”";
+        MyLinkedHashMap<String, Integer> myLinkedHashMap = new MyLinkedHashMap<>();
         String[] words = sentence.toLowerCase().split(" ");
-        for(String word : words) {
-            Integer value = myHashMap.get(word);
-            if(value == null)
+
+        for (String word : words) {
+            Integer value = myLinkedHashMap.get(word);
+            if (value == null)
                 value = 1;
             else
-                value = value+1;
-            myHashMap.add(word, value);
+                value = value + 1;
+            myLinkedHashMap.add(word, value);
         }
-        System.out.println(myHashMap);
-        for (String word:words) {
-            int frequency = myHashMap.get(word);
-            System.out.println("Frequency of "+word+" : "+frequency);
+        for (String word : words) {
+            int frequency = myLinkedHashMap.get(word);
+            System.out.println("Frequency of " + word + " : " + frequency);
         }
     }
 }
